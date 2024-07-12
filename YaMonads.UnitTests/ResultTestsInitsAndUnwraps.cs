@@ -1,6 +1,4 @@
-using System.Globalization;
 using FluentAssertions;
-using Xunit.Abstractions;
 using YaMonads.UnitTests.Helpers;
 using static YaMonads.UnitTests.Helpers.ResultAssertHelpers;
 
@@ -8,16 +6,8 @@ namespace YaMonads.UnitTests;
 
 public class ResultTestsInitsAndUnwraps
 {
-    private readonly ITestOutputHelper _testOutputHelper;
-    private static readonly Random Random = new();
-
-    public ResultTestsInitsAndUnwraps(ITestOutputHelper testOutputHelper)
-    {
-        _testOutputHelper = testOutputHelper;
-    }
-
     [Theory]
-    [ClassData(typeof(TestingDecimalsProvider))]
+    [ClassData(typeof(DecimalsProvider))]
     private void Ok_OfDecimalAndString_DecimalsGiven_ResultsWithOkCreated(
         decimal okValue)
     {
@@ -29,7 +19,7 @@ public class ResultTestsInitsAndUnwraps
     }
 
     [Theory]
-    [ClassData(typeof(TestingObjectsProvider))]
+    [ClassData(typeof(ObjectsProvider))]
     public void Ok_OfObjectAndString_ObjectGiven_ResultsWithOkCreated(
         object okValue)
     {
@@ -54,7 +44,7 @@ public class ResultTestsInitsAndUnwraps
     }
 
     [Theory]
-    [ClassData(typeof(TestingErrorStringsProvider))]
+    [ClassData(typeof(StringsProvider))]
     private void Err_OfDecimalAndString_StringErrorsGiven_ResultsWithSameStringCreated(
         string errValue)
     {
@@ -67,7 +57,7 @@ public class ResultTestsInitsAndUnwraps
     }
 
     [Theory]
-    [ClassData(typeof(TestingErrorExceptionsProvider))]
+    [ClassData(typeof(ExceptionsProvider))]
     private void Err_OfDecimalAndException_ExceptionErrorsGiven_ResultsWithSameExceptionCreated(
         Exception errValue)
     {

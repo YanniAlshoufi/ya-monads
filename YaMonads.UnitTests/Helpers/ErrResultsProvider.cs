@@ -3,7 +3,7 @@ using System.Data;
 
 namespace YaMonads.UnitTests.Helpers;
 
-public class TestingErrResultsProvider : IEnumerable<object[]>
+public class ErrResultsProvider : IEnumerable<object[]>
 {
     public IEnumerator<object[]> GetEnumerator()
     {

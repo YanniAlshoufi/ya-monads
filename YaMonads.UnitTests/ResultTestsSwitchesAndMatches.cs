@@ -16,7 +16,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingDecimalsProvider))]
+    [ClassData(typeof(DecimalsProvider))]
     private void Switch_OfDecimalAndString_ValidResultGiven_CorrectActionExecuted(
         decimal okValue)
     {
@@ -47,7 +47,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingErrorStringsProvider))]
+    [ClassData(typeof(StringsProvider))]
     private void Switch_OfDecimalAndString_InvalidResultGiven_CorrectActionExecuted(
         string errValue)
     {
@@ -79,7 +79,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingDecimalsProvider))]
+    [ClassData(typeof(DecimalsProvider))]
     private async Task SwitchAsync_OfDecimalAndString_ValidResultGiven_CorrectActionExecuted(
         decimal okValue)
     {
@@ -112,7 +112,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingErrorStringsProvider))]
+    [ClassData(typeof(StringsProvider))]
     private async Task SwitchAsync_OfDecimalAndString_InvalidResultGiven_CorrectActionExecuted(
         string errValue)
     {
@@ -145,7 +145,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingDecimalsProvider))]
+    [ClassData(typeof(DecimalsProvider))]
     private void Match_OfDecimalAndString_ValidResultGiven_CorrectFuncExecuted(
         decimal okValue)
     {
@@ -175,7 +175,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingErrorExceptionsProvider))]
+    [ClassData(typeof(ExceptionsProvider))]
     private void Match_OfDecimalAndException_InvalidResultGiven_CorrectFuncExecuted(
         Exception errValue)
     {
@@ -206,7 +206,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingDecimalsProvider))]
+    [ClassData(typeof(DecimalsProvider))]
     private async Task MatchAsync_OfDecimalAndString_ValidResultGiven_CorrectFuncExecuted(
         decimal okValue)
     {
@@ -238,7 +238,7 @@ public class ResultTestsSwitchesAndMatches
     }
 
     [Theory]
-    [ClassData(typeof(TestingErrorExceptionsProvider))]
+    [ClassData(typeof(ExceptionsProvider))]
     private async Task MatchAsync_OfDecimalAndException_InvalidResultGiven_CorrectFuncExecuted(
         Exception errValue)
     {
