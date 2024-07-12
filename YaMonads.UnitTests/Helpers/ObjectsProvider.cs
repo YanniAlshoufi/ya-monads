@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace YaMonads.UnitTests.Helpers;
 
-public class TestingObjectsProvider : IEnumerable<object[]>
+public class ObjectsProvider : IEnumerable<object[]>
 {
     public IEnumerator<object[]> GetEnumerator()
     {

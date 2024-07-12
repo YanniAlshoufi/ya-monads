@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace YaMonads.UnitTests.Helpers;
 
-public class TestingDecimalsProvider : IEnumerable<object[]>
+public class DecimalsProvider : IEnumerable<object[]>
 {
     public IEnumerator<object[]> GetEnumerator()
     {

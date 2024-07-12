@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace YaMonads.UnitTests.Helpers;
 
-public class TestingErrorExceptionsProvider : IEnumerable<object[]>
+public class ExceptionsProvider : IEnumerable<object[]>
 {
     public IEnumerator<object[]> GetEnumerator()
     {

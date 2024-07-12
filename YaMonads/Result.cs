@@ -9,7 +9,7 @@ public readonly struct Result<TOk, TErr>
         throw new ArgumentException("Please provide a value!");
 
     /// <summary>
-    /// Equivalent to <see cref="Ok{TROk, TRErr}"/>
+    /// Equivalent to <see cref="Ok"/>
     /// </summary>
     public Result(TOk value)
     {
@@ -23,7 +23,7 @@ public readonly struct Result<TOk, TErr>
     }
 
     /// <summary>
-    /// Equivalent to <see cref="Err{TROk, TRErr}"/>
+    /// Equivalent to <see cref="Err"/>
     /// </summary>
     public Result(TErr value)
     {
