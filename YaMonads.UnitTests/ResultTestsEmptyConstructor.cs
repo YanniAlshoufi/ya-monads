@@ -5,7 +5,7 @@ namespace YaMonads.UnitTests;
 public class ResultTestsEmptyConstructor
 {
     [Fact]
-    public void EmptyConstructor_WhenCalled_ResultIsOk()
+    public void EmptyConstructor_WhenCalled_ExceptionIsThrown()
     {
         // Arrange
 
@@ -17,3 +17,5 @@ public class ResultTestsEmptyConstructor
             .WithMessage("Please provide a value!");
     }
 }
+
+
